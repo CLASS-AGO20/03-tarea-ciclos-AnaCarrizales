@@ -31,7 +31,27 @@ export default class App
         } 
         return operacion;
     }
-  
+
+    esPrimo(numero)
+    {
+        let i = 2;
+        let resultado;
+        do
+        {
+            if((numero % 2 == 0) && (numero % i == 0) )
+            {
+                resultado = false;
+            }
+            else
+            {
+                resultado = true;
+            }
+            i++;
+        }
+        while(i <= numero);
+        return resultado;
+    }
+
     
 }
 
@@ -42,3 +62,7 @@ console.log(app.sumatoriaSerieUno(5));
 
 console.log("Probando sumatoriaSerieDos()");
 console.log(app.sumatoriaSerieDos(5));
+
+console.log("Probando esPrimo()");
+console.log(app.esPrimo(4));
+console.log(app.esPrimo(3));

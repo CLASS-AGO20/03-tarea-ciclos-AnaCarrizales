@@ -1,4 +1,5 @@
-export default class App {
+export default class App 
+{
 
     sumatoriaSerieUno(numero)
     {
@@ -11,10 +12,32 @@ export default class App {
         return operacion;
     }
 
-
-
-
+    sumatoriaSerieDos(numero)
+    {
+        let i = 1;
+        let operacion = 0;
+        while(i <= numero)
+        {
+            if ((i != 1) && (i % 2 != 0))
+            {
+                operacion = operacion - (1/i);
+            }
+            if((i == 1) || (i % 2 == 0))
+            {
+                operacion = operacion + (1/i);
+                
+            }
+            i++;
+            
+            
+        } 
+        return operacion;
+    }
+  
+    
 }
 
 let app = new App();
 console.log(app.sumatoriaSerieUno(5));
+
+console.log(app.sumatoriaSerieDos(5));

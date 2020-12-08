@@ -28,8 +28,6 @@ export default class App
                 
             }
             i++;
-            
-            
         } 
         return operacion;
     }
@@ -38,6 +36,9 @@ export default class App
 }
 
 let app = new App();
+
+console.log("Probando sumatoriaSerieUno()");
 console.log(app.sumatoriaSerieUno(5));
 
+console.log("Probando sumatoriaSerieDos()");
 console.log(app.sumatoriaSerieDos(5));

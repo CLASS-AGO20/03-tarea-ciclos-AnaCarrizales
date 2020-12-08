@@ -3,9 +3,10 @@ export default class App {
     sumatoriaSerieUno(numero)
     {
         let operacion = 0;
-        for(let i = 1; i <= numero; i++)
+        for(let i = 1; i <= numero; i = i + 1)
         {
-            operacion = 1/numero;
+            operacion = operacion + (1/i);
+            
         }
         return operacion;
     }

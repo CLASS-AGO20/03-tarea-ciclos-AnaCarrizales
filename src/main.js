@@ -34,15 +34,17 @@ export default class App
 
     esPrimo(numero)
     {
-        let i = 2;
+        let i = 1;
         let resultado;
+        let multiplos;
         do
         {
             if((numero % 2 == 0) && (numero % i == 0) )
             {
                 resultado = false;
+                multiplos = multiplos + 1;
             }
-            else
+            else if ((numero % 2 != 0) && (numero % i != 0))
             {
                 resultado = true;
             }
@@ -65,4 +67,5 @@ console.log(app.sumatoriaSerieDos(5));
 
 console.log("Probando esPrimo()");
 console.log(app.esPrimo(4));
-console.log(app.esPrimo(3));
+console.log(app.esPrimo(16));
+console.log(app.esPrimo(17));

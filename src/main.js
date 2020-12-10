@@ -40,7 +40,7 @@ export default class App
         let multiplos = 0;
         do
         {
-            if((a % i == 0) || (a % 2 == 0))
+            if(a % i == 0)
             {
                 multiplos = multiplos + 1;
                 resultado = true;
@@ -55,6 +55,19 @@ export default class App
         return resultado;
     }
 
+    obtenerMultiplos(inicio, fin)
+    {
+        let i = inicio;
+        do
+        {
+            if(i % 3 == 0)
+            {
+
+            }
+            i++;
+        }
+        while(i<=fin)
+    }
     
 }
 

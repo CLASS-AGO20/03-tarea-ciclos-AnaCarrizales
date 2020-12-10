@@ -70,6 +70,36 @@ export default class App
         while(i<=fin)
         return multiplos;
     }
+
+    obtenerImpares(numero1,numero2)
+    {
+        let temporal;
+        let impar = 0;
+        let string = "";
+        if(numero2 > numero1)
+        {
+            temporal = numero1;
+            numero1 = numero2;
+            numero2 = temporal;
+        }
+        for(let i = numero1; i >= numero2; i--)
+        {
+            if (i % 2 != 0)
+            {
+                if(impar == 0)
+                {
+                    impar = impar + i;
+                    impar = impar + string;
+                }
+                else
+                {
+                    impar = impar + "," + i;
+                    impar = impar + string;
+                }
+            }
+        }
+        return impar;
+    }
     
 }
 
@@ -88,3 +118,6 @@ console.log(app.esPrimo(17));
 
 console.log("Probando obtenerMultiplos()");
 console.log(app.obtenerMultiplos(10,25));
+
+console.log("Probando obtenerImpares()");
+console.log(app.obtenerImpares(5,10));

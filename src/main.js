@@ -58,11 +58,12 @@ export default class App
     obtenerMultiplos(inicio, fin)
     {
         let i = inicio;
+        multiplos = "";
         do
         {
             if(i % 3 == 0)
             {
-
+                multiplos = multiplos + i;
             }
             i++;
         }
